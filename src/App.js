@@ -1,23 +1,48 @@
+import { useState } from 'react';
+import Celebration from './Celebration';
+import { list } from './data';
 import logo from './logo.svg';
-import './App.css';
-
 function App() {
+  const [winner, setWinner] = useState('??????');
+  const [done, setDone] = useState(false);
+  const getEmployee = () => {
+    var employee =
+      list[Math.floor(Math.random() * list.length)].name.toString();
+    return employee;
+  };
+  const main = () => {
+    const intervalID = setInterval(() => {
+      setWinner(getEmployee());
+    }, 100);
+    setTimeout(() => {
+      clearTimeout(intervalID);
+      setDone(true);
+    }, 5000);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <img className="logo" src={logo} alt="logo" />
+        {!done ? (
+          <h1 className="btn-shaffle" onClick={main}>
+            RAFFLE
+          </h1>
+        ) : (
+          ''
+        )}
+
+        <h2 className="winner-is">WINNER IS</h2>
+        <h2 className="winner">{winner.toString()}</h2>
+        {done ? (
+          <>
+            <h2 className="cong">Congratulations</h2>
+            <Celebration />
+          </>
+        ) : (
+          ''
+        )}
+      </div>
     </div>
   );
 }

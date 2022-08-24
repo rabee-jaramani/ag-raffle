@@ -1,5 +1,6 @@
 {
   "name": "ag-raffle",
+  "homepage": "https://apparelgroupapps.com/raffle/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
