@@ -34,8 +34,9 @@ function App() {
          
         ) : (
           <>
-          <h2 className="winner-is">WINNER IS</h2>
+          
           <h2 className="cong">Congratulations</h2>
+          <h2 className="winner-is">WINNER IS</h2>
           <Celebration />
           <img className='element1' src={element1} alt="element1"/>
           <img className='element2' src={element2} alt="element1"/>
