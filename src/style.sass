@@ -8,6 +8,14 @@
     width: 100%
     height: 100vh
     background-color: #03257e
+    &:after
+        content:''
+        position: absolute
+        right:0
+        top:0
+        width:40px
+        height:100vh
+        background-color:#c4d600
 .container
     width: 100%
     height: 100%
@@ -24,11 +32,14 @@
     transform: translate(-50%)
 .btn-shaffle
     background-color: #c4d600
-    padding: 10px 15px
+    padding: 10px 50px
     width: fit-content
     text-align: center
     cursor: pointer
     z-index: 500
+    font-size:30px
+    font-weight:100
+    border-radius:30px
 h1,h2
     width: fit-content
     margin: 20px auto
@@ -44,7 +55,12 @@ h1,h2
     font-size: 3rem
     letter-spacing: 5px
     padding: 10px
-
+.element1,.element2
+    position: absolute
+    bottom:0
+    width:30vw
+.element2
+    right:40px
 @keyframes cong_anim
     0%
         opacity: 0
@@ -161,24 +177,24 @@ h1,h2
     -webkit-animation-duration: 1600ms
 
 .confetti-piece:nth-child(odd)
-    background: #7431e8
+    background: #c4d600
 
 .confetti-piece:nth-child(even)
     z-index: 1
 
 .confetti-piece:nth-child(4n)
-    width: 5px
+    width: 50px
     height: 12px
     -webkit-animation-duration: 4000ms
 
 .confetti-piece:nth-child(3n)
-    width: 3px
+    width: 100px
     height: 10px
     -webkit-animation-duration: 5000ms
     -webkit-animation-delay: 500ms
 
 .confetti-piece:nth-child(4n-7)
-    background: red
+    background: #fff
 
 @keyframes makeItRain
     0%
