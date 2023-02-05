@@ -28,22 +28,22 @@ function App() {
     <div className="App">
       <div className="container">
         <img className="logo" src={logo} alt="logo" />
-        {!done ? (raffiling?'': <h1 className="btn-shaffle" onClick={main}>
-            RAFFLE
-          </h1>
-         
+        {!done ? (raffiling ? '' : <h1 className="btn-shaffle" onClick={main}>
+          RAFFLE
+        </h1>
+
         ) : (
           <>
-          
-          <h2 className="cong">Congratulations</h2>
-          <h2 className="winner-is">WINNER IS</h2>
-          <Celebration />
-          <img className='element1' src={element1} alt="element1"/>
-          <img className='element2' src={element2} alt="element1"/>
-        </>
+
+            <h2 className="cong">Congratulations</h2>
+            <h2 className="winner-is">WINNER IS</h2>
+            <Celebration />
+            <img className='element1' src={element1} alt="element1" />
+            <img className='element2' src={element2} alt="element1" />
+          </>
         )}
 
-        
+
         <h2 className="winner">{winner.toString()}</h2>
       </div>
     </div>
